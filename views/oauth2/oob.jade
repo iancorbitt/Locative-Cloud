@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  div.container.container55
+    center
+      h2 Authenticating…
+
+  div.hidden#access_token
+  script(src='/javascripts/jquery-1.10.2.min.js')
+  script
+    | $(document).ready(function () {
+    |   $('#access_token').html(
+    |     /(#access_token=)(.*)(&token_type=)(.*)/.exec(window.location.hash)[2]
+    |   );
+    | });

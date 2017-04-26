@@ -1,0 +1,25 @@
+extends layout_noheader
+
+block content
+  script(src="/javascripts/notification.js")
+  div#notification-status.alert.alert-info.hidden Sending notification…
+  div.container
+    h1 Send notification
+    div
+      form(role="form")
+        table.table
+          tr
+            td Recipient
+            td
+              input#session-id.form-control(type="text" placeholder="Session ID" value="#{sessionId}" readonly="true")
+          tr
+            td Message
+            td
+              textarea#message.form-control(rows="3" placeholder="Message")
+          tr
+            td
+            td
+              div.pull-right
+                button#cancel-button.btn.btn-default(type="button" onclick='cancel()') Cancel
+                &nbsp;
+                button#send-button.btn.btn-primary.disabled(type="button" onclick='send()') Send

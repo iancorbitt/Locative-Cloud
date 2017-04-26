@@ -1,0 +1,16 @@
+extends layout_signup
+
+block content
+  script(type='text/javascript')
+    //- | $(document).ready(function(){window.location='#{supportUrl}';});
+  div.container.createaccount-container
+    center
+      h3 Get in touch with us on&nbsp;
+        a(href='//slack.locative.io') Slack
+        | ,&nbsp;
+        a(href='https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fmessages%2Fconversation-user%25253A329978570476013%3Fref%3Dpage_header') Facebook Messenger
+        | &nbsp;or via&nbsp;
+        a(href='https://twitter.com/locativehq') Twitter
+        | .
+      center
+        div.fb-messenger-code &nbsp;

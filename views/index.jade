@@ -1,0 +1,37 @@
+extends layout_map
+
+block content
+  div#map-canvas
+    if !locals.session.passport.user
+      script(type="text/javascript").
+        $(document).on('user_location_initialized', function() {
+          window.map.setCenter(window.userMarker.position);
+          setTimeout(function(){
+            window.map.setZoom(15);
+          }, 2000);
+        });
+    else
+      script(type="text/javascript").
+
+        $(document).on('map_initialized', function() {
+          var fencelogs = new Array(#{fencelogs});
+          window.fencelogs = fencelogs;
+          for (var i = 0; i < fencelogs.length; i++) {
+            var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(fencelogs[i][1], fencelogs[i][0]),
+              map: window.map,
+              icon: '/images/marker-universal.png'
+            });
+            marker.id = i;
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                //- window.location.href = '/location/' + window.fencelogs[marker.id][2];
+                $.colorbox({iframe:true,width:'800px',height:'80%',opacity:0.6,fixed:true,href:'/location/' + window.fencelogs[marker.id][2]});
+              }
+            })(marker, i));
+          }
+        });
+        $(document).on('user_location_initialized', function() {
+          window.map.setCenter(window.userMarker.position);
+          window.map.setZoom(15);
+        });

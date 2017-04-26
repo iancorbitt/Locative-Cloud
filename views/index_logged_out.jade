@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  link(rel='stylesheet' href='/stylesheets/loggedout.css')
+  div.row
+    div.col-md-4
+        div.panel.panel-default
+          div.panel-heading Automation par excellence
+          div.panel-body
+            | Imagine you're coming home, won't it be great to automatically switch your lights on? Maybe you'll leave your house while in a hurry and forget to switch your lights off.
+            br
+            br
+            | No problem: Just configure your desired locations as a Geofences and let Locative do the rest! By calling a HTTP-URL (either via GET or POST request) you can trigger events on your server as you wish.
+        div.panel.panel-default
+          div.panel-heading oAuth v2 API, Socket.IO, and more...
+          div.panel-body
+            | Locative is featuring some really awesome technologies to keep you connected with your data.
+            br
+            br
+            | Wether you're into Home-Automation or just want to see where you check in and out, Locative is the tool of your choice.
+            br
+            br
+            | Additionally we're giving you mobile Apps at hand (for free) to use with (or even without) our services. Make sure to check out our Apps in the App Store and on Google Play!
+        div#store-badge-div
+          a(href='https://itunes.apple.com/us/app/locative/id725198453?mt=8')
+            img(id='appstore-badge' src='/images/appstore-badge.png')
+          a(href='https://play.google.com/store/apps/details?id=io.locative.app')
+            img(id='google-play-badge' src='/images/google-play-badge.png')
+
+    div.col-md-4
+      div#gf-iphone
+    div.col-md-4
+      div.panel.panel-default
+        div.panel-heading Your automation center at a glance!
+        div.panel-body
+          | Upon entering or exiting the locations you added, Locative performs HTTP requests on your behalf to trigger events. Using the Locative Webservice you're always up-to-date with your devices and have a central place to manage them.
+          br
+          br
+          | Also we're providing you with a bunch of APIs to take full control over your automation.
+      div.panel#twitter-div
+          a.twitter-timeline(data-dnt="true" href="https://twitter.com/LocativeHQ" data-widget-id="511459393175420928") Tweets by @LocativeHQ
+          script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
