@@ -1,9 +1,6 @@
-# Locative Cloud App
+# Locative Cloud App ([Discontinued, click here to read more.](http://blog.locative.io/bye-everyone-df01871fe949))
 
-[![Slack](https://slack.locative.io/badge.svg)](https://slack.locative.io/)
 [![Twitter: @Kidmar](https://img.shields.io/badge/contact-@Kidmar-blue.svg?style=flat)](https://twitter.com/Kidmar)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/kimar/locative-cloud/blob/master/LICENSE.md)
-[ ![Codeship Status for kimar/locative-cloud](https://codeship.com/projects/890a0d10-2d12-0134-f306-42d5f584ed48/status?branch=master)](https://codeship.com/projects/163569)
 
 ![Screenshot](screenshot.png)
 
