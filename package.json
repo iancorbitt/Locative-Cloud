@@ -35,7 +35,7 @@
     "json2csv": "~2.2.1",
     "less-middleware": "*",
     "method-override": "^2.3.5",
-    "moment": "~2.4.0",
+    "moment": "~2.11.2",
     "moment-timezone": "^0.2.1",
     "mongoose": "~4.4.11",
     "morgan": "^1.7.0",
